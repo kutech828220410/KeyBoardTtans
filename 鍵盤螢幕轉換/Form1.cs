@@ -121,6 +121,7 @@ namespace 鍵盤螢幕轉換
             int int_wParam = wParam.ToInt32();
             string keys_str = Keys.ToString();
             if (keys_str == "RMenu") return;
+            if (keys_str == "Escape") return;
             if(textBox_清除號碼.Text == Keys.ToString())
             {
 
@@ -136,6 +137,11 @@ namespace 鍵盤螢幕轉換
                 keybd_event((byte)keys_code.D0, 0, KEYEVENTF_EXTENDEDKEY, 0);
                 keybd_event((byte)keys_code.ALT, 0, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
                 keybd_event((byte)keys_code.D0, 0, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
+
+                keybd_event((byte)keys_code.ALT, 0, KEYEVENTF_EXTENDEDKEY, 0);
+                keybd_event((byte)keys_code.D4, 0, KEYEVENTF_EXTENDEDKEY, 0);
+                keybd_event((byte)keys_code.ALT, 0, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
+                keybd_event((byte)keys_code.D4, 0, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
             }
             if (textBox_加10.Text == Keys.ToString())
             {
