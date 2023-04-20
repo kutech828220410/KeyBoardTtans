@@ -44,7 +44,7 @@ namespace 鍵盤螢幕轉換
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox_加4 = new System.Windows.Forms.TextBox();
+            this.textBox_減1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -245,7 +245,7 @@ namespace 鍵盤螢幕轉換
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.textBox_加4);
+            this.panel4.Controls.Add(this.textBox_減1);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Location = new System.Drawing.Point(622, 34);
             this.panel4.Name = "panel4";
@@ -262,15 +262,15 @@ namespace 鍵盤螢幕轉換
             this.label7.TabIndex = 1;
             this.label7.Text = "快捷鍵";
             // 
-            // textBox_加4
+            // textBox_減1
             // 
-            this.textBox_加4.Enabled = false;
-            this.textBox_加4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox_加4.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.textBox_加4.Location = new System.Drawing.Point(76, 54);
-            this.textBox_加4.Name = "textBox_加4";
-            this.textBox_加4.Size = new System.Drawing.Size(106, 29);
-            this.textBox_加4.TabIndex = 1;
+            this.textBox_減1.Enabled = false;
+            this.textBox_減1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox_減1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.textBox_減1.Location = new System.Drawing.Point(76, 54);
+            this.textBox_減1.Name = "textBox_減1";
+            this.textBox_減1.Size = new System.Drawing.Size(106, 29);
+            this.textBox_減1.TabIndex = 1;
             // 
             // label8
             // 
@@ -278,9 +278,9 @@ namespace 鍵盤螢幕轉換
             this.label8.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label8.Location = new System.Drawing.Point(3, 11);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 26);
+            this.label8.Size = new System.Drawing.Size(34, 26);
             this.label8.TabIndex = 1;
-            this.label8.Text = "+4";
+            this.label8.Text = "-1";
             // 
             // panel5
             // 
@@ -810,7 +810,7 @@ namespace 鍵盤螢幕轉換
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox_加4;
+        private System.Windows.Forms.TextBox textBox_減1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label9;

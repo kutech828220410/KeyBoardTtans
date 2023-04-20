@@ -61,8 +61,8 @@ namespace 鍵盤螢幕轉換
             textBox_加1.TextChanged += TextBox_加1_TextChanged;
             textBox_加10.KeyDown += TextBox_加10_KeyDown;
             textBox_加10.TextChanged += TextBox_加10_TextChanged;
-            textBox_加4.KeyDown += TextBox_加4_KeyDown;
-            textBox_加4.TextChanged += TextBox_加4_TextChanged;
+            textBox_減1.KeyDown += TextBox_減1_KeyDown;
+            textBox_減1.TextChanged += TextBox_減1_TextChanged;
 
             textBox_Num0.KeyDown += TextBox_Num0_KeyDown;
             textBox_Num0.TextChanged += TextBox_Num0_TextChanged;
@@ -100,7 +100,7 @@ namespace 鍵盤螢幕轉換
             textBox_清除號碼.Enabled = checkBox_設定模式.Checked;
             textBox_加1.Enabled = checkBox_設定模式.Checked;
             textBox_加10.Enabled = checkBox_設定模式.Checked;
-            textBox_加4.Enabled = checkBox_設定模式.Checked;
+            textBox_減1.Enabled = checkBox_設定模式.Checked;
             textBox_Num0.Enabled = checkBox_設定模式.Checked;
             textBox_Num1.Enabled = checkBox_設定模式.Checked;
             textBox_Num2.Enabled = checkBox_設定模式.Checked;
@@ -151,13 +151,18 @@ namespace 鍵盤螢幕轉換
                 keybd_event((byte)keys_code.ALT, 0, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
                 keybd_event((byte)keys_code.D3, 0, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
             }
-            if (textBox_加4.Text == Keys.ToString())
+            if (textBox_減1.Text == Keys.ToString())
             {
 
                 keybd_event((byte)keys_code.ALT, 0, KEYEVENTF_EXTENDEDKEY, 0);
-                keybd_event((byte)keys_code.D2, 0, KEYEVENTF_EXTENDEDKEY, 0);
+                keybd_event((byte)keys_code.D1, 0, KEYEVENTF_EXTENDEDKEY, 0);
                 keybd_event((byte)keys_code.ALT, 0, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
-                keybd_event((byte)keys_code.D2, 0, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
+                keybd_event((byte)keys_code.D1, 0, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
+
+                keybd_event((byte)keys_code.ALT, 0, KEYEVENTF_EXTENDEDKEY, 0);
+                keybd_event((byte)keys_code.D4, 0, KEYEVENTF_EXTENDEDKEY, 0);
+                keybd_event((byte)keys_code.ALT, 0, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
+                keybd_event((byte)keys_code.D4, 0, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
             }
             if (textBox_Num0.Text == Keys.ToString())
             {
@@ -284,14 +289,14 @@ namespace 鍵盤螢幕轉換
             SaveMyConfig();
             e.Handled = false;
         }
-        private void TextBox_加4_TextChanged(object sender, EventArgs e)
+        private void TextBox_減1_TextChanged(object sender, EventArgs e)
         {
-            textBox_加4.Text = myConfigClass.加4;
+            textBox_減1.Text = myConfigClass.減1;
         }
-        private void TextBox_加4_KeyDown(object sender, KeyEventArgs e)
+        private void TextBox_減1_KeyDown(object sender, KeyEventArgs e)
         {
-            myConfigClass.加4 = e.KeyCode.ToString();
-            textBox_加4.Text = myConfigClass.加4;
+            myConfigClass.減1 = e.KeyCode.ToString();
+            textBox_減1.Text = myConfigClass.減1;
             SaveMyConfig();
             e.Handled = false;
         }
@@ -426,7 +431,7 @@ namespace 鍵盤螢幕轉換
             private string _清除號碼 = "";
             private string _加1 = "";
             private string _加10 = "";
-            private string _加4 = "";
+            private string _減1 = "";
             private string _送出 = "";
             private string num0 = "";
             private string num1 = "";
@@ -443,7 +448,7 @@ namespace 鍵盤螢幕轉換
             public string 清除號碼 { get => _清除號碼; set => _清除號碼 = value; }
             public string 加1 { get => _加1; set => _加1 = value; }
             public string 加10 { get => _加10; set => _加10 = value; }
-            public string 加4 { get => _加4; set => _加4 = value; }
+            public string 減1 { get => _減1; set => _減1 = value; }
             public string Num0 { get => num0; set => num0 = value; }
             public string Num1 { get => num1; set => num1 = value; }
             public string Num2 { get => num2; set => num2 = value; }
@@ -488,7 +493,7 @@ namespace 鍵盤螢幕轉換
             textBox_清除號碼.Text = myConfigClass.清除號碼;
             textBox_加1.Text = myConfigClass.加1;
             textBox_加10.Text = myConfigClass.加10;
-            textBox_加4.Text = myConfigClass.加4;
+            textBox_減1.Text = myConfigClass.減1;
             textBox_Num0.Text = myConfigClass.Num0;
             textBox_Num1.Text = myConfigClass.Num1;
             textBox_Num2.Text = myConfigClass.Num2;
